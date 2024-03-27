@@ -10,7 +10,7 @@
    <followRedirects>false</followRedirects>
    <httpBody></httpBody>
    <httpBodyContent>{
-  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;:\&quot;Miguel Governo\&quot;,\n  \&quot;email\&quot;:\&quot;migas@example\&quot;,\n  \&quot;gender\&quot;:\&quot;female\&quot;,\n  \&quot;status\&quot;:\&quot;active\&quot;\n}&quot;,
+  &quot;text&quot;: &quot;{\n  \&quot;name\&quot;:\&quot;Miguel Govern\&quot;,\n  \&quot;email\&quot;:\&quot;migas@example\&quot;,\n  \&quot;gender\&quot;:\&quot;female\&quot;,\n  \&quot;status\&quot;:\&quot;active\&quot;\n}&quot;,
   &quot;contentType&quot;: &quot;application/json&quot;,
   &quot;charset&quot;: &quot;UTF-8&quot;
 }</httpBodyContent>
