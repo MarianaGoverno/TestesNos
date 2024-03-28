@@ -15,7 +15,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>DELETE</restRequestMethod>
-   <restUrl>https://gorest.co.in/public/v2/users/6804006?access-token=c4e350064188f7a246e362adce9b9f9b317f88b03636d97c7ed8c4804992ef1b</restUrl>
+   <restUrl>https://gorest.co.in/public/v2/users/${GlobalVariable.user_1}?access-token=c4e350064188f7a246e362adce9b9f9b317f88b03636d97c7ed8c4804992ef1b</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>

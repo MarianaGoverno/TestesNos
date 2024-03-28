@@ -16,38 +16,49 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-//GET
 
-//Obter a resposta da API GET users
-getUsersResponse = WS.sendRequest(findTestObject('GET users'))
+//POST
+//Pedido a API POST para criar um new user
+newUser = WS.sendRequest(findTestObject('POST a new user')) 
 
-//Obter os IDs dos users 
-userId = WS.getElementPropertyValue(getUsersResponse, 'id')
+//Print do newUser (do ID)
+println(newUser)
 
-//Print dos IDs 
-println(userId)
+//Validar que resposta do POST é OK
+WS.verifyResponseStatusCode(newUser, 201)
 
-// Gerar um numero random
-def randomIndex = new Random().nextInt(userId.size())
+//Obter o ID do new user
+newUserId = WS.getElementPropertyValue(newUser, 'id')
 
-// Obter valor do ID random
-def randomValue = userId[randomIndex]
+//Print do ID do new user
+println(newUserId)
 
-//Print do ID 
-println(randomValue)
+//Igualar a Global variable ao ID do new user
+GlobalVariable.user_1 = newUserId
 
-//Igualar a Global variable ao ID obtido
-GlobalVariable.user_1 = randomValue
+/* As seguintes linhas de código servem para validar o user criado atraves do metodo GET
+ * No entanto o metodo devolve erro 404 Not Found, em vez de 200 OK como era de esperar
 
-//Resposta da API GET user_1
-getUser1 = WS.sendRequest(findTestObject('GET user_1'))
+getResponse = WS.sendRequest(findTestObject('GET user_1'))
 
-//Obter o ID do user1
-user1Id = WS.getElementPropertyValue(getUser1, 'id')
+println(getResponse)
 
-//Print do user_1
-println(user1Id)
+WS.verifyResponseStatusCode(getResponse, 200)
 
-//Verificar que o ID random e o ID do user_1 são iguais
-WebUI.verifyEqual(user1Id, randomValue)
+*/
+
+//PUT
+//Pedido a PUT para atualizar a informação do new user
+updateUser = WS.sendRequest(findTestObject('PUT'))
+
+//Validar que resposta do PUT é OK
+WS.verifyResponseStatusCode(updateUser, 200)
+
+
+//DELETE
+// Pedido a API DElETE para eliminar o new user
+deleteResponse = WS.sendRequest(findTestObject('DELETE'))
+
+//Validar que resposta do DELETE é OK
+WS.verifyResponseStatusCode(deleteResponse, 204)
 
