@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <WebServiceRequestEntity>
    <description></description>
-   <name>GET user by id</name>
+   <name>GET users</name>
    <tag></tag>
    <elementGuidId>51877611-b7e6-409f-a204-576f67a32751</elementGuidId>
    <selectorMethod>BASIC</selectorMethod>
@@ -21,7 +21,7 @@
    <maxResponseSize>-1</maxResponseSize>
    <migratedVersion>5.4.1</migratedVersion>
    <restRequestMethod>GET</restRequestMethod>
-   <restUrl>https://gorest.co.in/public/v2/users/6807494</restUrl>
+   <restUrl>https://gorest.co.in/public/v2/users</restUrl>
    <serviceType>RESTful</serviceType>
    <soapBody></soapBody>
    <soapHeader></soapHeader>
